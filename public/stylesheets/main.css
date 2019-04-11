@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Arvo:400,700|Niramit:400,700|Walter+Turncoat');
+
 @media screen {
   /* --- Reset Styles --- */
   * {
@@ -11,105 +13,104 @@
     width: 100%;
   }
 
-  /* --- Welcome Page Styles --- */
-  body {
-    background-color: lightblue;
-    color: #333;
-    font-family: Sans-Serif;
-    line-height: 18px;
+  /* --- Custom Megstrap Styling --- */
+  .mt-auto {
+    margin-top: auto!important;
   }
 
-  .wrapper {
-    background: #fff;
-    -moz-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
-    box-shadow: 0 0 10px rgba(0,0,0,.3);
-    margin: 16px auto;
-    max-width: 960px;
-    padding: 2.25%; /* 18px / 800px */
-    width: 85%;
+  footer {
+    padding-top: 3rem;
   }
 
-  h1 {
-    font-size: 36px;
-    line-height: 54px;
+  .footer-copyright {
+    font-family: 'Walter Turncoat', cursive;
+    background-color: rgb(243, 150, 3);
+    padding-left: 1.6rem;
   }
 
-  h2 {
-    border-bottom: 2px solid #ccc;
-    font-size: 24px;
-    line-height: 36px;
-    margin-bottom: 16px;
-  }
-
-  h3 {
-    font-size: 18px;
-    line-height: 36px;
-  }
-
-  p {
-    margin-bottom: 18px;
-  }
-
-  .main {
-    overflow: hidden;
-  }
-
-  .content {
-    float: left;
-    width: 60%; /* 480px / 800px */
-  }
-
-  .sidebar {
-    background: #eee;
-    border: 1px solid #ccc;
-    float: right;
-    padding: 2.08333333333%; /* 5px / 240px */
-    width: 30%; /* 240px / 800px */
-  }
-
-  .sidebar ul {
-    font-size: 14px;
-  }
-
-  .branding {
-    clear: both;
-  }
-
-  footer.branding {
-    border-top: 2px solid #ccc;
-    margin-top: 20px;
-    padding-top: 20px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .wrapper {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    width: auto;
-  }
-
-  .content, .sidebar {
-    float: none;
+  html, body {
+    font-size: 62.5%;
+    height: 100%;
     width: 100%;
   }
 
-  .sidebar {
-    background: transparent;
-    border: none;
-    border-top: 2px solid #ccc;
-    padding: 0;
+  body {
+    padding-top: 1.5rem;
+  }
+
+  .jumbotron {
+    background-color: rgb(4, 164, 169);
+  }
+
+  .jumbotron > div > h2 {
+    color: rgb(148, 27, 128);
+    border-bottom: 0.5rem dotted rgb(205, 207, 2)
+  }
+
+  .jumbotron > div > h1 {
+    color: rgb(252, 197, 20);
+    text-shadow: 0.25rem 0.25rem 1.25rem rgb(235, 87, 119), -0.25rem -0.25rem 1.25rem rgb(235, 87, 119), -0.25rem 0.25rem 1.25rem rgb(255, 29, 78), 0.25rem -0.25rem 1.25rem rgb(235, 87, 119);
+  }
+
+  .piñata > img {
+    max-height: 40rem;
+    margin-bottom: 2rem;
+  }
+
+  .tuesday > img {
+    max-width: 100%;
+  }
+
+  input.btn {
+    background-color: rgb(220, 6, 44);
+    color: rgb(205, 207, 2);
+    font-size: 4.8rem;
+    font-family: 'Arvo', serif;
+    font-weight: 700;
+    margin-top: 1rem;
+    padding: 1.5rem 5rem;
+    border: 0.2rem solid rgb(220, 6, 44));
+    border-radius: 0.5rem;
+    -moz-transition-duration: 0.3s;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+
+  input.btn:hover {
+    background-color: rgb(148, 27, 128);
+    color: rgb(235, 87, 119);
+  }
+
+  /* --- Welcome Page Styles --- */
+  body {
+    background-color: rgb(252, 197, 20);
+    color: rgb(69, 15, 0);
+    font-family: 'Niramit', Helvetica, sans-serif;
+    font-size: 1.8rem;
   }
 
   h1 {
-    font-size: 24px;
-    line-height: 36px;
+    font-family: 'Arvo', serif;
+    font-weight: 700;
+    font-size: 5.4rem;
+    color: rgb(235, 87, 119);
   }
 
   h2 {
-    font-size: 18px;
-    line-height: 24px;
+    font-family: 'Walter Turncoat', cursive;
+    color: rgb(220, 6, 44);
+    border-bottom: 0.2rem solid rgb(148, 27, 128);
+    font-size: 3.2rem;
+    padding-bottom: 0.2rem;
+    margin-bottom: 1.6rem;
+  }
+
+  h3 {
+    font-family: 'Walter Turncoat', cursive;
+    font-size: 2.8rem;
+  }
+
+  p {
+    margin-bottom: 1.8rem;
   }
 }
