@@ -1,23 +1,40 @@
-<div class="container">
-  <header><img src="images/corneal-small.png" class="img-responsive main-image"></header>
-  <div class="col-md-8 col-md-offset-2">
-    <h2>Sinatra Template Default Page</h2>
+<div class="jumbotron">
+  <div class="container">
+    <h2 class="text-center">You come seeking an answer to the eternal question...</h2>
+    <h1 class="text-center">Is it time for tacos?</h2>
+  </div>
+</div>
 
-    <div class="content">
-      <p>Welcome to the Sinatra Template! If you're seeing this page, then everything is working
-      as expected. To get started, delete this file (<code>app/views/welcome.erb)</code> and begin adding
-      your own actions to <code>application_controller.rb</code>. For more information, see the <a href="https://github.com/thebrianemory/corneal">README</a>.</p>
+<div class="container-fluid">
+
+  <div class="row">
+
+    <div class="col-lg-8 col-xl-9"> <%# Body text %>
+      <p>You're in luck my friend, because the great piñata is here to help you in your quest, but first you must listen to his tale:</p>
+      <p>Most do not know the true origin of the piñata equine race. It is a thing of legends, which many would scoff at upon hearing. Long ago when unicorns, leprechauns, fairies, and other magical creatures were free to roam about without fear or repercussions there was a perfect storm. The elves habitually played in Candyland after a day of working in Santa's shop and the nymphs would frequently join them, riding in on the backs of unicorns and giving Mother Goose a break from having to keep watch on the little devils. One day a fierce storm was predicted, and though they were warned by both Santa and Mother Goose, the rebelious tiny tinkers ignored sound advice and visited Candyland. Soon a raging thunderstorm came crashing through their games, forcing them to take shelter in a candy cave. With every crash of thunder and peal of lightning, the ground trembeled and bones rattled. However, just as soon as it appeared, the storm subsided. The elves, nymphs, and unicorns hesitantly left the cave to find an enormous and vivid rainbow, ending in a pile of candy right in the middle of Candyland! In their haste to rush toward the pile, they didn't notice one last storm cloud lagging behind the others. The unicorns being the fastest runners of the three species arrived to the candy pile first and just as they were about to take their first mouthfuls, one last bolt of lightning struck in the middle of their group, melding the candy into their being and the wrappers onto their skins, creating the very first group of piñatas.</p>
+      <p>Of the true piñata equine race, there are very few left and we live apart from humankind. We have had brief interactions with humans in the recent past and our story has moved some of them to create a festive game in our image. For this honor, I shall give you the answer to the question you seek.
     </div>
 
-    <div class="sidebar">
-      <h3>Environment</h3>
-      <ul>
-        <li><b>Ruby:</b> <%= RUBY_VERSION %></li>
-        <li><b>Environment:</b> <%= ENV["RACK_ENV"] %></li>
-        <li><b>Server:</b> <%= @env["SERVER_SOFTWARE"] %></li>
-        <li><b>Port:</b> <%= @env["SERVER_PORT"] %></li>
-      </ul>
+    <div class="col-lg-4 col-xl-3 text-center piñata"> <%# Image %>
+      <img src="/images/piñata.png" alt="The great piñata">
     </div>
 
   </div>
+
+  <form method="POST" action="/new-day">
+
+    <div class="form-row">
+      <div class="col">
+        <input class="form-control" type="text" name="weekday" value="<%= Time.now.strftime("%A") %>" hidden>
+      </div>
+    </div>
+
+    <div class="form-row text-center">
+      <div class="col">
+        <input class="btn" type="submit" value="Taco Time?">
+      </div>
+    </div>
+
+  </form>
+
 </div>
