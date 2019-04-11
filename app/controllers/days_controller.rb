@@ -5,7 +5,7 @@ class DaysController < ApplicationController
     if @weekday.tuesday?
       redirect "/days/tuesday"
     else
-      redirect "/days/not_tuesday"
+      redirect "/days/not-tuesday"
     end
   end
 
@@ -14,7 +14,7 @@ class DaysController < ApplicationController
   end
 
   get '/days/not-tuesday' do
-    erb :'/days/not_tuesday'
+    erb :'/days/not-tuesday'
   end
   
 end
