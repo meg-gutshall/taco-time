@@ -1,4 +1,20 @@
 class DaysController < ApplicationController
   
+  post '/new-day' do
+    @weekday = Day.create(params)
+    if @weekday.tuesday?
+      redirect "/days/tuesday"
+    else
+      redirect "/days/not_tuesday"
+    end
+  end
+
+  get '/days/tuesday' do
+    erb :'/days/tuesday'
+  end
+
+  get '/days/not-tuesday' do
+    erb :'/days/not_tuesday'
+  end
   
 end
