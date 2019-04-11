@@ -1,7 +1,7 @@
 class Day < ActiveRecord::Base
 
   def tuesday?
-    Time.now.strftime("%A") == "Tuesday"
+    self == "Tuesday"
   end
 
 end
