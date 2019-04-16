@@ -1,7 +1,7 @@
 class Day < ActiveRecord::Base
 
   def tuesday?
-    self == "Tuesday"
+    self.weekday == "Tuesday"
   end
 
 end
