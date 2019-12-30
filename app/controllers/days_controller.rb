@@ -1,7 +1,7 @@
 class DaysController < ApplicationController
   
   post '/new-day' do
-    @weekday = Day.create(params)
+    @weekday = Day.create(weekday: Time.now.strftime("%A"))
     if @weekday.tuesday?
       redirect "/days/tuesday"
     else
